@@ -2,6 +2,7 @@
 ###I tested eight sets of the parameters and compare the population genetic parameters calculated from compute with Morrell et al., 2006, 
 and figured out this set is closest one.
 
+module load freebayes/1.1.0
 freebayes -f /panfs/roc/groups/9/morrellp/shared/References/Reference_Sequences/Barley/Morex/barley_RefSeq_v1.0/150831_barley_pseudomolecules.fasta\
 -L /panfs/roc/groups/9/morrellp/hoffmanp/WBDC_BAM_indexed.txt\
 -r chr5H:600130957-600132012\
@@ -17,3 +18,10 @@ freebayes -f /panfs/roc/groups/9/morrellp/shared/References/Reference_Sequences/
 --no-mnps\
 --no-complex\
 -v stk_WBDC_regions_set8.vcf
+
+###after I get the vcf file, I use vcftools to filtering out the non-SNP markers:
+###use default VCFtools (0.1.15)
+vcftools  --vcf  stk_WBDC_regions_set8.vcf\
+--remove-indels\
+--recode --recode-INFO-all\
+--out  SNPs_stk_WBDC_regions_set8.vcf
