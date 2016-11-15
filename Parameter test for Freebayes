@@ -1,4 +1,7 @@
 ###The best parameter set(take stk gene as an example):
+###I tested eight sets of the parameters and compare the population genetic parameters calculated from compute with Morrell et al., 2006, 
+and figured out this set is closest one.
+
 freebayes -f /panfs/roc/groups/9/morrellp/shared/References/Reference_Sequences/Barley/Morex/barley_RefSeq_v1.0/150831_barley_pseudomolecules.fasta\
 -L /panfs/roc/groups/9/morrellp/hoffmanp/WBDC_BAM_indexed.txt\
 -r chr5H:600130957-600132012\
