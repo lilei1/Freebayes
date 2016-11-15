@@ -1,2 +1,16 @@
-The best parameter set:
-freebayes -f /panfs/roc/groups/9/morrellp/shared/References/Reference_Sequences/Barley/Morex/barley_RefSeq_v1.0/150831_barley_pseudomolecules.fasta -L /panfs/roc/groups/9/morrellp/hoffmanp/WBDC_BAM_indexed.txt -r chr5H:600130957-600132012 --theta 0.008 --ploidy 1 --use-reference-allele --min-mapping-quality 30 --min-base-quality 30 --min-alternate-count 3 --min-alternate-total 3 --min-alternate-fraction 0.3 --hwe-priors-off --no-mnps --no-complex  -v stk_WBDC_regions_set8.vcf
+###The best parameter set(take stk gene as an example):
+freebayes -f /panfs/roc/groups/9/morrellp/shared/References/Reference_Sequences/Barley/Morex/barley_RefSeq_v1.0/150831_barley_pseudomolecules.fasta\
+-L /panfs/roc/groups/9/morrellp/hoffmanp/WBDC_BAM_indexed.txt\
+-r chr5H:600130957-600132012\
+--theta 0.008\
+--ploidy 1\
+--use-reference-allele\
+--min-mapping-quality 30\
+--min-base-quality 30\
+--min-alternate-count 3\
+--min-alternate-total 3\
+--min-alternate-fraction 0.3\
+--hwe-priors-off\
+--no-mnps\
+--no-complex\
+-v stk_WBDC_regions_set8.vcf
